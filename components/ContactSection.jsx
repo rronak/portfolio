@@ -1,0 +1,71 @@
+"use client";
+
+import Image from "next/image";
+import "../app/ContactSection.css";
+
+export default function ContactSection() {
+  return (
+    <section id="contact" className="contact-section section">
+      <div className="contact-container">
+        <h2>Contact Me</h2>
+        <p>Let's connect!</p>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="contact-grid">
+          {/* Contact Links on Left */}
+          <aside className="contact-side">
+            <div className="contact-icons-wrapper">
+              {/* Email */}
+              <a className="contact-tab wide-tab" href="mailto:raimaji120@gmail.com" aria-label="Email">
+                <div className="tab-head">
+                  <Image src="/email.png" alt="Email" width={36} height={36} />
+                  <span className="contact-label">Email</span>
+                </div>
+                <div className="tab-detail">raimaji120@gmail.com</div>
+              </a>
+
+              {/* Phone */}
+              <a className="contact-tab wide-tab" href="tel:+14375772997" aria-label="Phone">
+                <div className="tab-head">
+                  <Image src="/phone.png" alt="Phone" width={36} height={36} />
+                  <span className="contact-label">Phone</span>
+                </div>
+                <div className="tab-detail">+1 437-577-2997</div>
+              </a>
+
+              {/* LinkedIn & GitHub side by side */}
+              <div className="icon-row-centered">
+                <a className="contact-tab icon-only" href="https://www.linkedin.com/in/ronak120" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Image src="/linkedin.png" alt="LinkedIn" width={36} height={36} />
+                </a>
+
+                <a className="contact-tab icon-only" href="https://github.com/rronak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Image src="/github.png" alt="GitHub" width={36} height={36} />
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          {/* Vertical "OR" */}
+          <div className="contact-or">OR</div>
+
+          {/* Contact Form on Right */}
+          <form
+            className="contact-form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Form submitted! (Integrate email service here)");
+            }}
+          >
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="text" placeholder="Subject" required />
+            <textarea placeholder="Message" rows={5} required />
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}

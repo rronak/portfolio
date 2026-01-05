@@ -1,26 +1,319 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------- Global Styles ---------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: 'Google Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #040010;
+  color: white;
+  scroll-behavior: smooth;
+  transition: background 0.5s, color 0.5s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Hide default scrollbar */
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  width: 0px; /* Chrome, Safari, Opera */
+  background: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  font-family: inherit;
+}
+
+body.light-mode {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* bigger navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background: rgba(4, 0, 16, 0.8); /* glassy */
+  backdrop-filter: blur(8px);
+  padding: 0 40px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+/* Extra protective layer behind navbar */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+/* Navbar logo (your name) on top-left */
+.navbar-logo {
+  position: absolute;
+  left: 40px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.navbar-logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px #ffffffab, 0 0 12px #ffffff;
+}
+
+/* Navbar links container (centered) */
+.navbar-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Navbar links/buttons */
+.navbar-links a,
+.navbar-links a:visited {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px; /* bigger buttons */
+  font-size: 1.1rem; /* bigger text */
+  border-radius: 8px;
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease,
+    border 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect: glassy border + glow for all links except logo */
+.navbar-links a:hover {
+  transform: scale(1.15);
+  text-shadow: 0 0 8px #ffffffab, 0 0 12px #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  width: 100%;
+  height: calc(100vh - 80px); /* adjust for new navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  padding-top: 4%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  gap: 4rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+}
+
+/* Glass background for hero text */
+.hero-text-bg {
+  background: rgba(255, 255, 255, 0.062);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Hero text */
+.hero-text h1 {
+  font-size: 3.5rem; /* bigger */
+  margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+  font-size: 1.3rem; /* bigger */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Resume button */
+.resume-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resume-btn:hover {
+  background: #dfdfff;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* Hero image */
+.hero-image {
+  flex: 0 0 350px; /* bigger profile image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 350px;
+  max-height: 350px;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(217, 217, 217, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 0 70px rgba(147, 194, 255, 0.5), 0 0 120px rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------- Contact Section ---------------- */
+.contact-section {
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------------- Contact Grid ---------------- */
+.contact-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-or {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-or {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 1rem 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------------- Contact Form ---------------- */
+.contact-form {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(99, 93, 124, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 2px rgba(0,188,212,0.25);
+}
+
+.contact-form button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: #0015ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #dde6ff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Offset all sections for fixed navbar */
+section {
+  scroll-margin-top: 100px; /* adjust to match navbar height + some spacing */
 }
