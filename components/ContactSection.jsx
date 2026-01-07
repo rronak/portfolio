@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import "../app/ContactSection.css";
+import "./ContactSection.css";
 
 export default function ContactSection() {
   return (

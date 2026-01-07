@@ -1,4 +1,5 @@
 "use client";
+import "./ProjectSection.css"
 
 export default function ProjectsSection() {
   const projects = [
