@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',        // enables static HTML export
-  trailingSlash: true,     // helps GitHub Pages serve files correctly
-  reactStrictMode: true,   // optional
+  output: 'export',
+  trailingSlash: true,
+  reactStrictMode: true,
+  images: {
+    unoptimized: true,  
+  },
 };
 
 module.exports = nextConfig;

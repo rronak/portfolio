@@ -1,14 +1,59 @@
 "use client";
 
 export default function ProjectsSection() {
+  const projects = [
+    {
+      title: "F1 Data Analysis",
+      description: "Comprehensive comparison and statistical analysis of performance data across the last two F1 seasons using Python.",
+      tech: ["Python", "Pandas", "Matplotlib"],
+      link: "https://github.com/rronak/F1-analysis"
+    },
+    {
+      title: "Football Prediction (xG Boost)",
+      description: "Predicting Premier League match outcomes using XGBoost and historical Expected Goals (xG) data for high accuracy.",
+      tech: ["XGBoost", "Machine Learning", "Scikit-Learn"],
+      link: "https://github.com/rronak"
+    },
+    {
+      title: "F1 Website Data Scraper",
+      description: "Automated tool to extract real-time race results and driver statistics directly from official F1 sources.",
+      tech: ["BeautifulSoup", "Python", "Automation"],
+      link: "https://github.com/rronak/F1-Data-Scraper"
+    }
+  ];
+
   return (
-    <section id="projects" className="section projects-section">
-      <h2>Projects</h2>
-      <div className="project">
-        <strong>F1 Data Analysis</strong>: Compare and analyze data from last 2 F1 seasons.
-      </div>
-      <div className="project">
-        <strong>Football Prediction with xG Boost</strong>: Predicting score of football matches in the Premier League.
+    <section id="projects" className="projects-section">
+      <h2 className="section-title text-white">Projects</h2>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="github-link-icon"
+            >
+              <img 
+                src="/github.png"  
+                alt="GitHub" 
+                className="github-icon-img"
+              />
+            </a>
+
+            <div className="project-header">
+              <h3 className="text-white">{project.title}</h3>
+            </div>
+            
+            <p className="project-description">{project.description}</p>
+            
+            <div className="tech-tags">
+              {project.tech.map((tag, i) => (
+                <span key={i} className="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
