@@ -1,6 +1,6 @@
 import "./globals.css";           
-import "./ContactSection.css";   
-import "./Particles.css";           
+import "../components/ContactSection.css";   
+import "../components/Particles.css";           
 import Navbar from "../components/Navbar";
 import Particles from "../components/Particles";
 

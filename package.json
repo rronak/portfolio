@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "gsap": "^3.14.2",
     "next": "16.0.10",
     "ogl": "^1.0.11",
     "react": "19.2.1",

@@ -1,3 +1,4 @@
+/* --- Core Layout & Typography --- */
 html, body {
   height: 100%;
   margin: 0;
@@ -22,6 +23,7 @@ body::-webkit-scrollbar {
 
 * {
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 body.light-mode {
@@ -29,6 +31,11 @@ body.light-mode {
   color: #000000;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
+/* --- Navbar --- */
 .navbar {
   position: fixed;
   top: 0;
@@ -88,12 +95,7 @@ body.light-mode {
   padding: 12px 20px;
   font-size: 1.1rem;
   border-radius: 8px;
-  transition: 
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    text-shadow 0.3s ease,
-    border 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,6 +110,7 @@ body.light-mode {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+/* --- Hero Section --- */
 .hero {
   width: 100%;
   height: calc(100vh - 80px);
@@ -165,24 +168,13 @@ body.light-mode {
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  transition: 
-    transform 0.3s ease, 
-    background 0.3s ease, 
-    filter 0.3s ease; 
+  transition: transform 0.3s ease, background 0.3s ease, filter 0.3s ease; 
 }
 
 .resume-btn:hover {
   transform: translateY(-4px);
   background: hsl(0, 0%, 100%);
   filter: drop-shadow(0 0 12px #7db7ff); 
-}
-
-
-.hero-image {
-  flex: 0 0 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .profile-pic {
@@ -199,6 +191,7 @@ body.light-mode {
   box-shadow: 0 0 70px rgba(147, 194, 255, 0.5), 0 0 120px rgba(255, 255, 255, 0.4);
 }
 
+/* --- Contact Section --- */
 .contact-section {
   padding: 6rem 2rem;
   display: flex;
@@ -275,17 +268,6 @@ body.light-mode {
   font-size: 1rem;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #00bcd4;
-  box-shadow: 0 0 0 2px rgba(0,188,212,0.25);
-}
-
 .contact-form button {
   padding: 0.75rem 2rem;
   border: none;
@@ -294,7 +276,7 @@ body.light-mode {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -303,120 +285,7 @@ body.light-mode {
   transform: scale(1.05);
 }
 
-section {
-  scroll-margin-top: 100px;
-}
-
-.projects-section {
-  padding: 6rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  justify-content: center;
-  perspective: 1000px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.05); 
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
-  transition: 
-    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    background 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-}
-
-.project-card:hover {
-  transform: translateY(-12px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
-              0 0 20px rgba(96, 165, 250, 0.1);
-}
-
-.github-link-icon {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  transition: transform 0.3s ease;
-  z-index: 20;
-}
-
-.github-icon-img {
-  width: 26px;
-  height: 26px;
-  filter: invert(1);
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.github-link-icon:hover {
-  transform: scale(1.2) rotate(10deg);
-}
-
-.github-link-icon:hover .github-icon-img {
-  opacity: 1;
-}
-
-.project-header {
-  margin-bottom: 1.2rem;
-  padding-right: 45px;
-}
-
-.project-card h3 {
-  font-size: 1.4rem;
-  margin: 0;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.project-card:hover .github-icon-img {
-  opacity: 1;
-  filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
-}
-
-.github-link-icon:hover .github-icon-img {
-  opacity: 1;
-  filter: invert(1) drop-shadow(0 0 12px #60a5fa); 
-  transform: scale(1.2) rotate(8deg);
-}
-
-.project-description {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  flex-grow: 1;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.tag {
-  background: rgba(96, 165, 250, 0.1);
-  color: #60a5fa;
-  padding: 0.4rem 0.9rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border: 1px solid rgba(96, 165, 250, 0.2);
-}
-
+/* --- About Section --- */
 .about-section {
   padding: 5rem 2rem;
   max-width: 1000px;
@@ -436,46 +305,23 @@ section {
   }
 }
 
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-.skill-category {
-  margin-bottom: 1.5rem;
-}
-
-.skill-title {
-  color: #60a5fa;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.75rem;
-}
-
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
 .skill-badge {
   background: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.85rem;
   transition: all 0.3s ease;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .skill-badge:hover {
   background: white;
   color: #000;
   transform: translateY(-2px);
-}
-
-.text-white {
-  color: white;
 }
