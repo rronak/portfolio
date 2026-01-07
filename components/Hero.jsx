@@ -5,7 +5,6 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="hero-content">
 
-        {/* Text */}
         <div className="hero-text">
           <div className="hero-text-bg">
             <h1>Hi, I’m <b>Ronak</b> 👋</h1>
@@ -19,9 +18,8 @@ export default function Hero() {
               My ultimate goal is to grow as a developer, tackle hands-on challenges, and contribute to innovative projects while connecting with like-minded tech enthusiasts.
             </p>
 
-            {/* Resume Button */}
             <a
-              href="/Ronak_Rayamajhi_Resume.pdf"  // put your PDF in public folder
+              href="/Ronak_Rayamajhi_Resume.pdf"  
               download
               className="resume-btn"
             >
@@ -30,7 +28,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Profile Image */}
+   
         <div className="hero-image">
           <Image
             src="/mee.jpg"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import "./Particles.css";
+import "../app/Particles.css";
 import { Renderer, Camera, Geometry, Program, Mesh, Transform } from "ogl";
 
 const defaultColors = ["#ffffff", "#ffffff"];
