@@ -28,7 +28,7 @@ export default function ContactSection() {
                   <Image src="/portfolio/phone.png" alt="Phone" width={36} height={36} />
                   <span className="contact-label">Phone</span>
                 </div>
-                <div className="tab-detail">+1 437-577-2997</div>
+                <div className="tab-detail">+1 782-324-1003</div>
               </a>
 
               <div className="icon-row-centered">

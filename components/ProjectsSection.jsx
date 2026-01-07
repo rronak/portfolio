@@ -2,13 +2,7 @@
 
 export default function ProjectsSection() {
   const projects = [
-    {
-      title: "F1 Data Analysis",
-      description: "Comprehensive comparison and statistical analysis of performance data across the last two F1 seasons using Python.",
-      tech: ["Python", "Pandas", "Matplotlib"],
-      link: "https://github.com/rronak/F1-analysis"
-    },
-    {
+      {
       title: "Football Prediction (xG Boost)",
       description: "Predicting Premier League match outcomes using XGBoost and historical Expected Goals (xG) data for high accuracy.",
       tech: ["XGBoost", "Machine Learning", "Scikit-Learn"],
@@ -19,7 +13,21 @@ export default function ProjectsSection() {
       description: "Automated tool to extract real-time race results and driver statistics directly from official F1 sources.",
       tech: ["BeautifulSoup", "Python", "Automation"],
       link: "https://github.com/rronak/F1-Data-Scraper"
-    }
+    },
+    {
+      title: "Personal Portfolio Site",
+      description: "A personal portfolio website showcasing my projects, skills, and contact information.",
+      tech: ["Javascript", "React", "CSS"],
+      link: "https://github.com/rronak/portfolio"
+    },
+    {
+      title: "F1 Data Analysis",
+      description: "Comprehensive comparison and statistical analysis of performance data across the last two F1 seasons using Python.",
+      tech: ["Python", "Pandas", "Matplotlib"],
+      link: "https://github.com/rronak/F1-analysis"
+    },
+  
+  
   ];
 
   return (
