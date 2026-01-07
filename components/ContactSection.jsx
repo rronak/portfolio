@@ -17,7 +17,7 @@ export default function ContactSection() {
             <div className="contact-icons-wrapper">
               <a className="contact-tab wide-tab" href="mailto:raimaji120@gmail.com" aria-label="Email">
                 <div className="tab-head">
-                  <Image src="/email.png" alt="Email" width={36} height={36} />
+                  <Image src="/portfolio/email.png" alt="Email" width={36} height={36} />
                   <span className="contact-label">Email</span>
                 </div>
                 <div className="tab-detail">raimaji120@gmail.com</div>
@@ -25,7 +25,7 @@ export default function ContactSection() {
 
               <a className="contact-tab wide-tab" href="tel:+14375772997" aria-label="Phone">
                 <div className="tab-head">
-                  <Image src="/phone.png" alt="Phone" width={36} height={36} />
+                  <Image src="/portfolio/phone.png" alt="Phone" width={36} height={36} />
                   <span className="contact-label">Phone</span>
                 </div>
                 <div className="tab-detail">+1 437-577-2997</div>
@@ -33,11 +33,11 @@ export default function ContactSection() {
 
               <div className="icon-row-centered">
                 <a className="contact-tab icon-only" href="https://www.linkedin.com/in/ronak120" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Image src="/linkedin.png" alt="LinkedIn" width={36} height={36} />
+                  <Image src="/portfolio/linkedin.png" alt="LinkedIn" width={36} height={36} />
                 </a>
 
                 <a className="contact-tab icon-only" href="https://github.com/rronak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Image src="/github.png" alt="GitHub" width={36} height={36} />
+                  <Image src="/portfolio/github.png" alt="GitHub" width={36} height={36} />
                 </a>
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function Hero() {
    
         <div className="hero-image">
           <Image
-            src="/mee.jpg"
+            src="/portfolio/mee.jpg"
             alt="Ronak"
             width={300}
             height={300}

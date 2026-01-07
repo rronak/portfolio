@@ -35,7 +35,7 @@ export default function ProjectsSection() {
               className="github-link-icon"
             >
               <img 
-                src="/github.png"  
+                src="/portfolio/github.png"  
                 alt="GitHub" 
                 className="github-icon-img"
               />
