@@ -4,8 +4,10 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   images: {
-    unoptimized: true,  
+    unoptimized: true,
   },
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio',
 };
 
 module.exports = nextConfig;
