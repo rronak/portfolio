@@ -46,20 +46,17 @@
 }
 
 .github-icon-img {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   filter: invert(1);
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 .github-link-icon:hover {
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.2);
 }
 
-.github-link-icon:hover .github-icon-img {
-  opacity: 1;
-}
 
 .project-header {
   margin-bottom: 1.2rem;
@@ -73,15 +70,11 @@
   font-weight: 700;
 }
 
-.project-card:hover .github-icon-img {
-  opacity: 1;
-  filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
-}
 
 .github-link-icon:hover .github-icon-img {
-  opacity: 1;
-  filter: invert(1) drop-shadow(0 0 12px #60a5fa); 
-  transform: scale(1.2) rotate(8deg);
+ 
+  filter: invert(1) drop-shadow(0 0 12px #77b4ff); 
+  transform: scale(1.2);
 }
 
 .project-description {

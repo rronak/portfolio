@@ -2,9 +2,9 @@
 
 export default function AboutSection() {
   const skills = [
-    { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS"] },
-    { category: "Data & ML", items: ["Python", "Pandas", "XGBoost", "Web Scraping"] },
-    { category: "Tools", items: ["Git", "SQL", "VS Code"] }
+    { category: "Web Dev", items: ["JavaScript","React","Next.js","Node.js","Tailwind CSS","HTML"] },
+    { category: "Data & ML", items: ["Python", "Pandas","NumPy","TensorFlow","SeaBorn","Scikit-Learn","MongoDB","PyTorch"] },
+    { category: "Tools", items: ["Git", "SQL", "VS Code", "GitHub","Docker"] }
   ];
 
   return (
