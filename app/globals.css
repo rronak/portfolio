@@ -1,4 +1,3 @@
-/* --- Core Layout & Typography --- */
 html, body {
   height: 100%;
   margin: 0;
@@ -32,7 +31,7 @@ body.light-mode {
 }
 
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 10px;
 }
 
 /* --- Navbar --- */
@@ -324,4 +323,21 @@ section {
   background: white;
   color: #000;
   transform: translateY(-2px);
+  cursor: default;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.text-white {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }

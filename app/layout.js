@@ -21,7 +21,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body style={{ margin: 0, padding: 0 }}>
-        {/* Particles Background */}
+        
+ 
         <Particles
           particleCount={100}
           particleSpread={11}
@@ -32,10 +33,9 @@ export default function RootLayout({ children }) {
           hoverStrength={2}
         />
 
-        {/* Navbar */}
         <Navbar />
 
-        {/* Page Content */}
+ 
         <main style={{ position: "relative", zIndex: 10 }}>{children}</main>
       </body>
     </html>
