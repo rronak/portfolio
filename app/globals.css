@@ -30,9 +30,12 @@ body.light-mode {
   color: #000000;
 }
 
-section {
-  scroll-margin-top: 10px;
+
+
+#about {
+  scroll-margin-top: 100px;
 }
+
 
 /* --- Navbar --- */
 .navbar {
@@ -289,6 +292,7 @@ section {
   padding: 5rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  font-size: larger;
 }
 
 .about-container {
@@ -340,4 +344,49 @@ section {
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+.experience-card {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.experience-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.experience-title span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+}
+
+.experience-meta {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.842);
+}
+
+.experience-desc {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
