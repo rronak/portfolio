@@ -13,10 +13,30 @@ export default function AboutSection() {
         <div className="about-content">
           <h2 className="text-white">About Me</h2>
           <p className="text-white">
-            I’m a Computer Programming student from Seneca College passionate about 
-            building data-driven applications and creative web experiences. 
-            I bridge the gap between complex data analysis and clean user interfaces.
+            Computer Programming graduate from Seneca College with 3.8 cumulative GPA.
           </p>
+          <div className="experience-card">
+  <h4 className="experience-title">
+    AI Data Analyst Intern <span>@ Peroptyx</span>
+  </h4>
+
+  <p className="experience-meta">
+    Sept 2025 – Dec 2025 · Remote · Toronto, ON
+  </p>
+
+  <ul className="experience-desc">
+  <li>
+    Evaluated and improved AI-generated datasets through accuracy, relevance,
+    and quality analysis at Peroptyx.
+  </li>
+  <li>
+    Identified anomalies and bias patterns while collaborating with
+    cross-functional teams to support model refinement.
+  </li>
+</ul>
+
+</div>
+
         </div>
 
         <div className="skills-container">

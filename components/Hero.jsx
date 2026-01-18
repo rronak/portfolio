@@ -9,22 +9,20 @@ export default function Hero() {
           <div className="hero-text-bg">
             <h1>Hi, I’m <b>Ronak</b> 👋</h1>
             <p>
-              A passionate developer with interests in Machine Learning and design, turning data into insights and creating engaging experiences.
+              A technically driven developer with interests in Machine Learning, data analysis, and software design, focused on transforming data into actionable insights and building efficient applications.
             </p>
-            <p>
-              I enjoy learning new programming tools and frameworks, experimenting with projects that blend creativity and technology, and I’m always open to improving my skills.
-            </p>
-            <p>
-              My ultimate goal is to grow as a developer, tackle hands-on challenges, and contribute to innovative projects while connecting with like-minded tech enthusiasts.
-            </p>
-
+            <p>Experienced as an <strong>AI Data Analyst</strong> at Peroptyx, working on data evaluation and annotation to improve the accuracy and reliability of machine learning systems.</p>
+            <p> Passionate about learning new tools, building hands-on projects, and continuously improving technical skills while contributing to innovative, data-driven solutions.</p>
+          
             <a
-              href="/Ronak_Rayamajhi_Resume.pdf"  
-              download
+              href="https://drive.google.com/file/d/1O_AEKTn1e044OXgeLRF48By68_uvMqmY/preview"
+              target="_blank"
+              rel="noopener noreferrer"
               className="resume-btn"
             >
               Get My Resume
             </a>
+
           </div>
         </div>
 

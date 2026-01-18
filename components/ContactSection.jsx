@@ -49,7 +49,7 @@ export default function ContactSection() {
             className="contact-form"
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Form submitted! (Integrate email service here)");
+              alert("I will reply you soon!");
             }}
           >
             <input type="text" placeholder="Your Name" required />
